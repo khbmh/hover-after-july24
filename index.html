@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover after</title>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921226.png" type="image/x-icon">
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: all 0.4s ease-out;
+    }
+    html , body{
+        height: 100%;
+        width: 100%;
+    }
+    div{
+      height: 40vh;
+      width: 50%;
+      margin: auto;
+      margin-top: 5vh;
+      background-color: #664f5c;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button{
+      width: 10vmax;
+      background-color: #c5d3f0;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-weight: 900;
+      font-size: 1vmax;
+      position: relative;
+      overflow: hidden;
+    }
+    button::after{
+      width: 8.2vmax;
+      content: 'Add to Cart';
+      background-color: #1a083f;
+      color: rgb(236, 216, 216);
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-weight: 900;
+      font-size: 1vmax;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+      transition: all 0.2s ease-out;
+      cursor: pointer;
+    }
+div:hover button::after{
+  top: 0;
+  border-radius: 5px;
+}
+.hover{
+  width: 70%;
+  height: 30vh;
+  margin: auto;
+  margin-top: 10vh;
+  background-color: #b54c4c;
+}
+.hover:hover{
+  background-color: #3da37e;
+}
+  </style>
+</head>
+<body>
+  <div class="div">
+    <button>Available Now</button>
+  </div>
+  <div class="hover">
+   
+  </div>
+</body>
+</html>
